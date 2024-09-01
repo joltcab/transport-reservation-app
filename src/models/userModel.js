@@ -1,10 +1,11 @@
-const mongoose = require('mongoose');
+exports.getAllUsers = (req, res) => {
+  res.status(200).json({ message: 'Get all users' });
+};
 
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  password: String,
-  isDriver: Boolean
-});
+exports.getUserById = (req, res) => {
+  res.status(200).json({ message: 'Get user by ID' });
+};
 
-module.exports = mongoose.model('User', userSchema);
+exports.createUser = (req, res) => {
+  res.status(200).json({ message: 'Create user' });
+};
